@@ -9,6 +9,3 @@ with open('libros.csv') as csvfile:
         linea = row[0]
         lineaSeparada = linea.split(";")
         print(lineaSeparada)
-        #rowToDivide = str(row[0])
-        #rowToDivide.split(';')
-        #print(rowToDivide)
