@@ -6,6 +6,9 @@ import csv
 with open('libros.csv') as csvfile:
     reader = csv.reader(csvfile)
     for row in reader:
-        rowToDivide = str(row[0])
-        rowToDivide.split(';')
-        print(rowToDivide)
+        linea = row[0]
+        lineaSeparada = linea.split(";")
+        print(lineaSeparada)
+        #rowToDivide = str(row[0])
+        #rowToDivide.split(';')
+        #print(rowToDivide)
