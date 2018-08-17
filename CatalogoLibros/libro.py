@@ -8,12 +8,4 @@ class Libro:
         self.titulo = dtitulo
         self.autor = dautor
         self.genero = dgenero
-    
-    def getTitulo():
-        return titulo
-    
-    def getAutor():
-        return autor
 
-    def getGenero():
-        return genero
