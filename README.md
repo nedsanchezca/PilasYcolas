@@ -1,8 +1,8 @@
 # PilasYcolas
 Ejercicio de Pilas  y Colas
 
-Diego Dark
+Diego Andrés Rubio Casallas - 20151020072
 
-Gabriela la gaby Lisethsita Ladino
+Gabriela Liseth Ladino Valbuena - 20151020073
 
-Néstor El perro de los perros Sánchez
+Néstor Danilo Sánchez Castañeda - 20151020115
