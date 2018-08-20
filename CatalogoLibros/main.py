@@ -41,6 +41,7 @@ def imprimirPila():
     libroAux = pilaEncontrados.desapilar()
     print(libroAux.autor + " + " + libroAux.titulo)
 
+#Arranque del programa
 print("Cómo desea buscar el libro")
 print("\n1. Por género \n2. Por autor")
 opcion = input("Digite la opción correspondiente")
