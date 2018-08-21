@@ -1,10 +1,11 @@
 import csv
 import libro 
-import pila
+import pila as pilita
 
-pilaLibros = pila.Pila()
-pilaEncontrados = pila.Pila()
-pilaAuxiliar = pila.Pila()
+pilaLibros = pilita.Pila()
+pilaEncontrados = pilita.Pila()
+pilaAuxiliar = pilita.Pila()
+contador = 0
 
 '''Procedemos a guardar en la pila los objetos de libros con los parametros dados por el archivo'''
 with open('libros.csv') as csvfile:
@@ -14,6 +15,7 @@ with open('libros.csv') as csvfile:
         lineaSeparada = linea.split(";")
         objetoAux = libro.Libro(lineaSeparada[0], lineaSeparada[2], lineaSeparada[1])
         pilaLibros.apilar(objetoAux)
+        contador += 1
         linea = ""
 
 
@@ -24,8 +26,9 @@ def buscarAutor(parametro):
             pilaEncontrados.apilar(librito)
         else:
             pilaAuxiliar.apilar(librito)
-        if pilaLibros.es_vacia():
+        if pilaLibros.es_vacia:
             break
+        
 
 def buscarGenero(parametro):
     while pilaLibros.es_vacia != 0:
@@ -38,19 +41,24 @@ def buscarGenero(parametro):
             break
 
 def imprimirPila():
-    libroAux = pilaEncontrados.desapilar()
-    print(libroAux.autor + " + " + libroAux.titulo)
+    contador = len(pilaEncontrados.items)
+    while contador != 0:
+        libroAux = pilaEncontrados.desapilar()
+        print("Autor Obra: " + libroAux.autor + " Titulo Obra: " + libroAux.titulo)
+        contador = contador - 1
+        if contador == 0:
+            break
 
 #Arranque del programa
 print("Cómo desea buscar el libro")
 print("\n1. Por género \n2. Por autor")
-opcion = input("Digite la opción correspondiente")
+opcion = input("Digite la opción correspondiente: ")
 if(opcion==str(1)):
-    atributo = input("Digite el género del libro")
-    buscarAutor(atributo)
-elif (opcion==str(2)):
-    atributo = input("Digite el autor del libro")
+    atributo = input("Digite el género del libro: ")
     buscarGenero(atributo)
+elif (opcion==str(2)):
+    atributo = input("Digite el autor del libro: ")
+    buscarAutor(atributo)
 else:
     print("Digite una opción correcta")
 
