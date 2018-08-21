@@ -24,7 +24,7 @@ def buscarAutor(parametro):
             pilaEncontrados.apilar(librito)
         else:
             pilaAuxiliar.apilar(librito)
-        if pilaLibros.es_vacia:
+        if pilaLibros.es_vacia():
             break
         
 
