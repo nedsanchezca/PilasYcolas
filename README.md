@@ -1,4 +1,4 @@
-# PilasYcolas
+# PilasYcolas usando python 3
 Ejercicio de Pilas  y Colas
 
 Diego Andrés Rubio Casallas - 20151020072
