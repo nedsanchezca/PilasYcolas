@@ -5,7 +5,6 @@ import pila as pilita
 pilaLibros = pilita.Pila()
 pilaEncontrados = pilita.Pila()
 pilaAuxiliar = pilita.Pila()
-contador = 0
 
 '''Procedemos a guardar en la pila los objetos de libros con los parametros dados por el archivo'''
 with open('libros.csv') as csvfile:
@@ -15,7 +14,6 @@ with open('libros.csv') as csvfile:
         lineaSeparada = linea.split(";")
         objetoAux = libro.Libro(lineaSeparada[0], lineaSeparada[2], lineaSeparada[1])
         pilaLibros.apilar(objetoAux)
-        contador += 1
         linea = ""
 
 
